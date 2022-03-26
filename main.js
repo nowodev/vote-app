@@ -1,1 +1,7 @@
-console.log(feed.stories);
+Vue.createApp({
+    data() {
+        return {
+            stories: Feed.stories
+        }
+    }
+}).mount('#app')

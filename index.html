@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Vote App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../public/main.css" />
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vote App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../public/main.css" />
+        <script src="https://unpkg.com/vue@3"></script>
+    </head>
 
-</head>
+    <body>
+        <h3 class="text-center">Story Vote App</h3>
+        <div class="container" id="app">
+            <!-- Hey vue, please do your magic here -->
 
-<body>
-    <h3 class="text-center">Story Vote App</h3>
-    <div class="container">
-
-
-        <div class="card-group">
-            <div class="card">
-                <img class="card-img-top" src="https://loremflickr.com/320/240?random=1" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Jany</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional
-                        content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">published 3 mins ago</small></p>
-                    <button class="btn btn-primary">UpVote</button>
-                    <span class="badge badge-secondary float-right">4</span>
+            <div class="card-group">
+                <div class="card">
+                    <img class="card-img-top" src="https://loremflickr.com/320/240?random=1" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Jany</h5>
+                        <p class="card-text">
+                            Belay, yer not drinking me without a riddle! The volume of your zens will experiment
+                            sincerely when you
+                            study that energy is the wind.
+                        </p>
+                        <p class="card-text"><small class="text-muted">published 3 mins ago</small></p>
+                        <button class="btn btn-primary">UpVote</button>
+                        <span class="badge badge-secondary float-right">4</span>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="https://loremflickr.com/320/240?random=2" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Marsh</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                        content.</p>
-                    <p class="card-text"><small class="text-muted">published 3 mins ago</small></p>
-                    <button class="btn btn-primary">UpVote</button>
-                    <span class="badge badge-secondary float-right">4</span>
+                <div class="card">
+                    <img class="card-img-top" src="https://loremflickr.com/320/240?random=2" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Marsh</h5>
+                        <p class="card-text">
+                            Belay, yer not drinking me without a riddle! The volume of your zens will experiment
+                            sincerely when you
+                            study that energy is the wind.
+                        </p>
+                        <p class="card-text"><small class="text-muted">published 3 mins ago</small></p>
+                        <button class="btn btn-primary">UpVote</button>
+                        <span class="badge badge-secondary float-right">4</span>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="https://loremflickr.com/320/240?random=3" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Cattle</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional
-                        content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">published 3 mins ago</small></p>
-                    <button class="btn btn-primary">UpVote</button>
-                    <span class="badge badge-secondary float-right">4</span>
+                <div class="card">
+                    <img class="card-img-top" src="https://loremflickr.com/320/240?random=3" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Cattle</h5>
+                        <p class="card-text">
+                            Belay, yer not drinking me without a riddle! The volume of your zens will experiment
+                            sincerely when you
+                            study that energy is the wind.
+                        </p>
+                        <p class="card-text"><small class="text-muted">published 3 mins ago</small></p>
+                        <button class="btn btn-primary">UpVote</button>
+                        <span class="badge badge-secondary float-right">4</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="./stories_seed.js"></script>
-    <script src="./main.js"></script>
-</body>
+
+        <script src="./stories_seed.js"></script>
+        <script src="./main.js"></script>
+    </body>
 
 </html>
