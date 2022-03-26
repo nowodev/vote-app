@@ -21,17 +21,17 @@
 
             <div class="card-group">
                 <div class="card">
-                    <img class="card-img-top" src="https://loremflickr.com/320/240?random=1" alt="Card image cap">
+                    <img class="card-img-top" v-bind:src="stories[0].storyImage" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Jany</h5>
-                        <p class="card-text">
-                            Belay, yer not drinking me without a riddle! The volume of your zens will experiment
-                            sincerely when you
-                            study that energy is the wind.
-                        </p>
-                        <p class="card-text"><small class="text-muted">published 3 mins ago</small></p>
+                        <h5 class="card-title">
+                            <a v-bind:href="stories[0].url">
+                                {{ stories[0].title }}
+                            </a>
+                        </h5>
+                        <p class="card-text">{{ stories[0].text }}</p>
+                        <p class="card-text"><small class="text-muted">published {{ stories[0].postedAt }}</small></p>
                         <button class="btn btn-primary">UpVote</button>
-                        <span class="badge badge-secondary float-right">4</span>
+                        <span class="badge badge-secondary float-right">{{ stories[0].votes }}</span>
                     </div>
                 </div>
                 <div class="card">
