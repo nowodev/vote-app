@@ -17,7 +17,7 @@
     <body>
         <h3 class="text-center">Story Vote App</h3>
         <div class="container col-4" id="app">
-            <div class="card" v-for="story in stories" v-bind:key="story.id">
+            <div class="card" v-for="story in sortedStories" v-bind:key="story.id">
                 <img class="card-img-top" v-bind:src="story.storyImage" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">
