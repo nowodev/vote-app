@@ -1,10 +1,10 @@
 const StoryComponent = {
     template: `
             <div class="card">
-                <img class="card-img-top" v-bind:src="story.storyImage" alt="Card image cap">
+                <img class="card-img-top" :src="story.storyImage" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">
-                        <a v-bind:href="story.url">
+                        <a :href="story.url">
                             {{ story.title }}
                         </a>
                     </h5>
@@ -12,7 +12,7 @@ const StoryComponent = {
                     <p class="card-text"><small class="text-muted">published {{ story.postedAt }}</small></p>
                     <button class="btn btn-primary" v-on:click="upVote(story.id)">UpVote</button>
                     <span
-                        v-bind:class="story.votes > 0 ? 'badge-success' : 'badge-secondary'" 
+                        :class="story.votes > 0 ? 'badge-success' : 'badge-secondary'" 
                         class="badge float-right">
                         {{ story.votes }}
                     </span>

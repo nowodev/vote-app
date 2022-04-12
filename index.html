@@ -18,8 +18,8 @@
 <body>
     <h3 class="text-center">Story Vote App</h3>
     <div class="container col-4" id="app">
-        <story-component v-for="story in sortedStories" v-bind:story="story"
-            v-bind:stories="stories" :key=" story.id">
+        <story-component v-for="story in sortedStories" :story="story" :stories="stories"
+            :key="story.id">
         </story-component>
     </div>
     <!-- bn -->
