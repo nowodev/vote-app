@@ -1,44 +1,30 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Vote App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-              crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="../public/main.css" />
-        <script src="https://unpkg.com/vue@3"></script>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vote App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../public/main.css" />
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
 
-    <body>
-        <h3 class="text-center">Story Vote App</h3>
-        <div class="container col-4" id="app">
-            <div class="card" v-for="story in sortedStories" v-bind:key="story.id">
-                <img class="card-img-top" v-bind:src="story.storyImage" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a v-bind:href="story.url">
-                            {{ story.title }}
-                        </a>
-                    </h5>
-                    <p class="card-text">{{ story.text }}</p>
-                    <p class="card-text"><small class="text-muted">published {{ story.postedAt }}</small></p>
-                    <button class="btn btn-primary" v-on:click="upVote(story.id)">UpVote</button>
-                    <span
-                        v-bind:class="story.votes > 0 ? 'badge-success' : 'badge-secondary'" 
-                        class="badge float-right">
-                        {{ story.votes }}
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <script src="./stories_seed.js"></script>
-        <script src="./main.js"></script>
-    </body>
+<body>
+    <h3 class="text-center">Story Vote App</h3>
+    <div class="container col-4" id="app">
+        <story-component v-for="story in sortedStories" v-bind:story="story"
+            v-bind:stories="stories" :key=" story.id">
+        </story-component>
+    </div>
+    <!-- bn -->
+    <script src="./stories_seed.js"></script>
+    <script src="./main.js"></script>
+</body>
 
 </html>
